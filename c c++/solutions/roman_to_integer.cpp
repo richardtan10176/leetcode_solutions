@@ -10,7 +10,6 @@ int main(){
             case 'I': 
                 sum += 1; // I +1
                 break;
-
             case 'V':
                 if(s[x-1] == 'I'){ //IV +4
                     sum += 4;

@@ -27,6 +27,7 @@ int main(){
     }
     cout << output << endl;
     return 0;
+    
 }
 
 bool isCharInString(string str, char target){
