@@ -11,6 +11,7 @@ int main(){
         }
     }
     int counter = 0;
+    
     for(int x = indice; x >= 0; x--){
         counter++;
         if(s[x-1] == ' '){
