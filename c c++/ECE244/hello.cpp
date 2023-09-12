@@ -1,7 +1,6 @@
 //hello.cpp
 #include <iostream>
 using namespace std;
-
 int main(){
     string name = "Richard";
     cout << "Hello ";
