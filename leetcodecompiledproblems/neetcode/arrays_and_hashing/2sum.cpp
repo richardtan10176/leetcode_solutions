@@ -2,28 +2,10 @@
 #include <unordered_map>
 using namespace std;
 
-/*beta O(n^2) solution
-class Solution {
-public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        vector<int> result = {0,0};
-        for(int x = 0; x < nums.size()-1; x++){
-            for(int y = x+1; y < nums.size(); y++){
-                if(nums[x]+nums[y] == target){
-                    result[0] = nums[x];
-                    result[1] = nums[y];
-                    return result;  
-                }
-            }
-        }
-        
-        return result;
-        
-    }
-};
 
-*/
-//gigachad linear time solution
+//build a hashmap using values as keys to store their indices
+//then interate through nums and search the hashmap to find 
+//the complement of nums[i], then 
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {

@@ -2,6 +2,8 @@
 #include <unordered_set>
 using namespace std;
 
+//build a hashmap and while doing so, check if the inserted element
+//has already been inserted. if so, there is a dupe value
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
