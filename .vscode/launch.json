@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/richardtan/Documents/GitHub/leetcode_solutions/c c++/ECE244",
-      "program": "/Users/richardtan/Documents/GitHub/leetcode_solutions/c c++/ECE244/build/Debug/outDebug"
+      "cwd": "/Users/richardtan/Documents/GitHub/leetcode_solutions/leetcodecompiledproblems/test",
+      "program": "/Users/richardtan/Documents/GitHub/leetcode_solutions/leetcodecompiledproblems/test/build/Release/outRelease"
     }
   ]
 }
