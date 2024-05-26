@@ -6,8 +6,6 @@
 #include <ctype.h>
 #include <stack>
 
-
-
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -19,18 +17,15 @@ struct TreeNode {
 
 class Solution {
 public:
-    TreeNode* invertTree(TreeNode* root) {
-        if (root == nullptr) return nullptr;
+    int maxDepth(TreeNode* root) {
 
-        //simply invert the nodes
-        TreeNode* temp = root->left;
-        root->left = root->right;
-        root->right = temp;
+        if(!root){
+            return 0;
+        } else{
+            int leftDepth = maxDepth(root->left)+1;
+            int rightDepth = maxDepth(root->right)+1;
+            return std::max(leftDepth, rightDepth);
+        }
 
-        //recurse to child nodes
-        invertTree(root->left);
-        invertTree(root->right);
-
-        return root;
     }
 };
