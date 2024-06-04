@@ -19,17 +19,22 @@ struct TreeNode {
 class Solution {
 public:
     bool isBalanced(TreeNode* root) {
-        
-    }
-    std::vector<int> dfs(TreeNode* root){
-        if(!root){
-            return {1,0};
+        if (root == NULL){
+            return true;
         }
-        std::vector<int> leftTree = dfs(root->left);
-        std::vector<int> rightTree = dfs(root->right);
-
-        bool 
-        
+		if (Height(root) == -1){
+            return false;
+        }
+		return true;
+	}
+	int Height(TreeNode* root) {
+        // Base case...
+		if (root == NULL)  return 0;
+		int leftHeight = Height(root->left);
+		int rightHight = Height(root->right);
+		if (leftHeight == -1 || rightHight == -1 || abs(leftHeight - rightHight) > 1){
+            return -1;  
+        }
+		return std::max(leftHeight, rightHight) + 1;
     }
 };
-    
