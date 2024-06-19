@@ -1,31 +1,34 @@
+#include <vector>
+#include <unordered_map>
 #include <iostream>
-using namespace std;
+#include <algorithm>
+#include <stdio.h>
+#include <ctype.h>
 
-int main(){
-    string haystack = "sadbutsad";
-    string needle = "sad";
-    bool found = false;
+class Solution {
+public:
+    int strStr(std::string haystack, std::string needle) {
+        if (needle.empty()) return 0;
+        
+        int ptr = 0;
+        int start = 0;
 
-    for(int x = 0; x < haystack.length(); x++){
-        if(haystack[x] == needle[0]){
-            for(int y = 0; y < needle.length(); y++){
-                if(x+y >= haystack.length()){
-                    cout << -1 << endl;
-                    return 0;
+        for (int x = 0; x < haystack.size(); x++) {
+            if (haystack[x] == needle[ptr]) {
+                if (ptr == 0) {
+                    start = x;
                 }
-                else if(!(haystack[x+y] == needle[y])){
-                    break;
+                ptr++;
+                if (ptr == needle.size()) {
+                    return start;
                 }
-                if(y == needle.length()-1 && haystack[x+y] == needle[y]){
-                    found = true;
+            } else {
+                if (ptr > 0) {
+                    x = start;
                 }
+                ptr = 0;
             }
         }
-        if(found == true){
-            cout << x << endl;
-            return 0;
-        }
+        return -1;
     }
-    cout << -1 << endl;
-    return 0;
-}
+};
