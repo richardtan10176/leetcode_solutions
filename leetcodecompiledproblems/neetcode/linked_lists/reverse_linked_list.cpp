@@ -21,6 +21,7 @@ public:
           head = right;
           right = right->next;
       }
+    
       head->next = left;
       return head;
   }
