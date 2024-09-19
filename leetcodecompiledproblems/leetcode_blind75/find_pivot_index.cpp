@@ -3,7 +3,6 @@
 #include <iostream>
 #include <algorithm>
 #include <stdio.h>
-#include <ctype.h>
 #include <stack>
 #include <queue>
 #include <deque>
